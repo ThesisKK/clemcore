@@ -14,6 +14,10 @@ FALLBACK_CONTEXT_SIZE = 256
 logger = logging.getLogger(__name__)
 stdout_logger = logging.getLogger("huggingface.multimodal.api")
 
+"""
+TODO:
+1) Add require_api_key for gated models - Gemma3, for example
+"""
 
 def check_context_limit(context_size: int, prompt_tokens: list, max_new_tokens: int = 100) -> Tuple[
     bool, int, int, int]:
