@@ -33,7 +33,7 @@ def _store_file(data, file_name: str, dir_path: str, sub_dir: str = None, do_ove
 
     with open(fp, "w", encoding='utf-8') as f:
         if file_name.endswith(".json"):
-            json.dump(data, f, ensure_ascii=False)
+            json.dump(data, f, ensure_ascii=False, indent=4)
         else:
             f.write(data)
     return fp
